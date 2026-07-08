@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
+import api.payload.User;
+
 public class UserEndpoints {
 	
 	public static Response create_User(User payload)
