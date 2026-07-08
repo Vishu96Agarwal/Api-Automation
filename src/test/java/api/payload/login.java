@@ -3,6 +3,8 @@ package api.payload;
 public class login {
 	
 	String email;
+	String password;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -15,8 +17,6 @@ public class login {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	String password;
-	
 	
 
 }
