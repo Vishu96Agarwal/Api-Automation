@@ -1,7 +1,9 @@
 package api.test;
 
+
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
 
 import api.endpoints.LoginEndpoint;
@@ -12,7 +14,7 @@ public class LoginTest {
 
     User userPayload;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup() {
 
         userPayload = new User();
