@@ -4,11 +4,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
-import api.payload.RouteBuilder;
+import api.payload.Enquiry;
 
-public class RouteBuilderEndpoints {
+public class EnquiryEndpoints {
 	
-	public static Response create_RouteBuilder(RouteBuilder payload)
+	public static Response create_Enquiry(Enquiry payload)
 	{
 		Response response = given()
 				.contentType(ContentType.JSON)
@@ -16,59 +16,59 @@ public class RouteBuilderEndpoints {
 				.body(payload)
 				
 				.when()
-				.post(Routes.post_routeBuilders);
+				.post(Routes.post_enquiry);
 		
 		return response;
 				
 	}
 	
 
-	public static Response get_RouteBuilder()
+	public static Response get_Enquiry()
 	{
 		Response response = given()
 				
 				.when()
-				.get(Routes.get_routeBuilders);
+				.get(Routes.get_enquiry);
 		
 		return response;
 				
 	}
 	
-	public static Response RouteBuilder(String RouteBuilderId )
+	public static Response get_Enquiry_id(String EnquiryId )
 	{
 		Response response = given()
-				.pathParam("id",RouteBuilderId)
+				.pathParam("id",EnquiryId)
 				
 				.when()
-				.get(Routes.get_routeBuilders_id);
+				.get(Routes.get_enquiry_id);
 		
 		return response;
 				
 	}
 	
 
-	public static Response update_RouteBuilder_id(String RouteBuilderId ,RouteBuilder payload)
+	public static Response update_Enquiry_id(String EnquiryId ,Enquiry payload)
 	{
 		Response response = given()
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
-				.pathParam("id",RouteBuilderId)
+				.pathParam("id",EnquiryId)
 				.body(payload)
 				
 				.when()
-				.patch(Routes.update_routeBuilders_id);
+				.patch(Routes.update_enquiry_id);
 		
 		return response;
 				
 	}
 	
-	public static Response delete_RouteBuilder_id(String RouteBuilderId )
+	public static Response delete_Enquiry_id(String EnquiryId )
 	{
 		Response response = given()
-				.pathParam("id",RouteBuilderId)
+				.pathParam("id",EnquiryId)
 				
 				.when()
-				.delete(Routes.delete_routeBuilders_id);
+				.delete(Routes.delete_enquiry_id);
 		
 		return response;
 				
